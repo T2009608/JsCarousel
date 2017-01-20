@@ -1,0 +1,145 @@
+*{
+	padding: 0;
+	margin: 0;
+}
+
+body{
+	padding：50px 0;
+	background-color: #fff;
+	font-size: 14px;
+	font-family: "Avenir Next";
+	color: #555;
+	-webkit-font-smoothing: antialiased; /*字体抗锯齿 chrome safari*/
+	-moz-osx-font-smoothing: grayscale; /*firefox*/
+}
+
+header{
+	text-align: center;
+	font-size: 40px;
+}
+
+/*通用样式*/
+.main-content{
+	position: relative;
+}
+
+.figure-content
+.figure-i{
+	width: 100%;
+	height: 400px;
+	position: relative;
+}
+
+/*所有图片容器*/
+.figure-content{
+	margin: 0 auto;
+	overflow: hidden;
+}
+
+/*每一张图片*/
+.figure-content .figure-i{
+	display: none;
+}
+
+.figure-content .figure-i .caption{
+	position: absolute;
+	right: 50%;
+	top: 30%;
+	z-index: 999;
+}
+
+.figure-content .figure-i .caption h2{
+	font-size: 70px;
+	line-height: 70px;
+	color: #000;
+	text-align: right;
+	font-family: "Open Sans Condensed";
+}
+
+.figure-content .figure-i .caption h3{
+	font-size: 40px;
+	line-height: 50px;
+	color: #b5b5b5;
+	text-align: right;
+}
+
+/*.figure-content .figure-i .caption h2{
+	font-size: 40px;
+	line-height: 50px;
+	color: #b5b5b5;
+	text-align: right;
+	margin-right: 45px;
+}
+
+.figure-content .figure-i .caption h3{
+	font-size: 70px;
+	line-height: 70px;
+	color: #000;
+	text-align: right;
+	font-family: "Open Sans Condensed";
+	margin-right: -45px;
+}*/
+
+.figure-content .figure-i img{
+	width: 100%;
+	position: absolute;
+	left: 0;
+	top: 0;
+	z-index: 1;
+}
+
+/*控制按钮容器*/
+.ctrl-content{
+	width: 100%;
+	height: 13px;
+	line-height: 13px;
+	text-align: center;
+	position: absolute;
+	bottom: -13px;
+	font-size: 0;
+}
+
+/*每个控制按钮*/
+.ctrl-content .ctrl-i{
+	display: inline-block;
+	width: 150px;
+	height: 13px;
+	background-color: #666;
+	box-shadow: 0 1px 1px rgba(0, 0, 0, .3);
+	position: relative;
+}
+
+.ctrl-content .ctrl-i:hover{
+	background-color: #888;
+}
+
+.ctrl-content .ctrl-i img{
+	width: 100%;
+	position: absolute;
+	left: 0;
+	bottom: 50px;
+	z-index: 1;
+	opacity: 0;
+	-webkit-transition: all .2s;
+}
+
+/*link visited hover active*/
+
+.ctrl-content .ctrl-i:hover img{
+	bottom: 13px;
+	-webkit-box-reflect:below 0px -webkit-gradient(
+		linear,
+		left top,
+		left bottom,
+		from(transparent),
+		color-stop(50%, transparent),
+		to(rgba(255,255,255, .3))
+		);
+	opacity: 1;
+}
+
+.clearfix{
+	display: block;
+	content: " ";
+	clear: both;
+}
